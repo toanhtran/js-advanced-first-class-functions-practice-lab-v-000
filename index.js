@@ -17,3 +17,9 @@ const driversByRevenue = function (drivers) {
     return driverOne.revenue - driverTwo.revenue;
   });
 };
+
+const totalRevenue = function (drivers) {
+  return drivers.reduce(function ( total, currentDriver) {
+    return currentDriver.revenue + total;
+  }, 0);
+};
